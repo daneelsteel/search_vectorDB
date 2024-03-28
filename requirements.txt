@@ -1,0 +1,7 @@
+gunicorn==21.2.0
+flask==2.1.2
+requests==2.31.0
+weaviate-client==3.21.0
+pandas==1.4.2
+razdel==0.5.0
+more-itertools==8.13.0
