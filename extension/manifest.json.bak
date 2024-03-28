@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Minerva's Owl",
+  "description": "Extension to look up interviews in Minerva's Owl database",
+  "version": "1.0",
+  "action": {
+    "default_popup": "suggestion.html",
+    "default_icon": "images/main.jpg"
+  },
+  "background": {
+    "service_worker": "script.js"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["http://localhost/*"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' http://localhost:5000; object-src 'self';"
+    },
+    "content_scripts": [
+      {"matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+}
